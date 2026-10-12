@@ -1,0 +1,148 @@
+name: Deploy to Reg.ru via SFTP
+
+on:
+  push:
+    branches: [main]      # автоматический деплой только при пуше в main
+  workflow_dispatch: {}   # + ручной запуск из вкладки Actions
+
+# Два деплоя одновременно не выполняются
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Upload files via SFTP
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # =====================================================================
+      # ВАРИАНТ 1 (рекомендуемый): easingthemes/ssh-deploy — rsync поверх SSH.
+      # Требует аутентификацию КЛЮЧОМ (у rsync нет пароля в batch-режиме).
+      # Как получить ключ для Reg.ru:
+      #   1. Локально: ssh-keygen -t ed25519 -f ./deploy_key -N ""
+      #   2. В панели Reg.ru («Дополнительно → SSH / Ключи доступа», либо
+      #      через файловый менеджер положить публичный ключ в
+      #      ~/.ssh/authorized_keys) — добавьте содержимое deploy_key.pub.
+      #   3. Содержимое приватного ключа deploy_key — в secret SFTP_SSH_KEY.
+      #   4. В Variables репозитория задайте USE_KEY_AUTH = true.
+      # Если на вашем тарифе shared-хостинга нет SSH-доступа — используйте
+      # Вариант 2 (чистый SFTP по логину/паролю FTP-аккаунта, по умолчанию).
+      # =====================================================================
+      - name: Deploy via rsync over SSH
+        if: ${{ vars.USE_KEY_AUTH == 'true' }}
+        uses: easingthemes/ssh-deploy@v5.1.7
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SFTP_SSH_KEY }}
+          ARGS: "-rlgoDzvc -i"            # rsync-аргументы; можно добавить --delete
+          SOURCE: "./"                    # деплоим всё содержимое репозитория
+          REMOTE_HOST: ${{ secrets.FTP_HOST }}
+          REMOTE_PORT: ${{ secrets.FTP_PORT }}   # обычно 22
+          REMOTE_USER: ${{ secrets.FTP_USERNAME }}
+          TARGET: ${{ secrets.FTP_ROOT }}        # напр. /home/login/www/example.ru
+          EXCLUDE: "/.git/, /.gitignore, /.github/, /README.md, /DEPLOY.md"
+          SCRIPT_BEFORE: |
+            echo "Deploying commit ${GITHUB_SHA} of ${GITHUB_REF_NAME}"
+
+      # =====================================================================
+      # ВАРИАНТ 2 (для shared-хостинга Reg.ru по умолчанию): чистый sftp
+      # с аутентификацией логином/паролем FTP-аккаунта. Без сторонних экшенов.
+      # Secrets: FTP_HOST, FTP_PORT (22), FTP_USERNAME, FTP_PASSWORD, FTP_ROOT.
+      # =====================================================================
+      - name: Prepare file list
+        if: ${{ vars.USE_KEY_AUTH != 'true' }}
+        run: |
+          find . -type f \
+            ! -path './.git/*' ! -path './.github/*' \
+            ! -name '.gitignore' ! -name 'README.md' ! -name 'DEPLOY.md' \
+            -printf '%P\n' > /tmp/upload.list
+          echo "Файлов к загрузке: $(wc -l < /tmp/upload.list)"
+          cat /tmp/upload.list
+
+      - name: Build SFTP batch script
+        if: ${{ vars.USE_KEY_AUTH != 'true' }}
+        run: |
+          {
+            # сначала создаём все подкаталоги (если есть)
+            dirs=$(awk -F/ 'NF>1 { sub("/[^/]+$", ""); print }' /tmp/upload.list | sort -u)
+            for d in $dirs; do echo "mkdir \"$d\""; done
+            # затем грузим файлы (mkdir на существующей папке даёт warning,
+            # но sftp -b продолжает работу — ошибки фильтруются ниже)
+            while read -r f; do
+              d=$(dirname "$f")
+              if [ "$d" = "." ]; then
+                echo "put \"$f\""
+              else
+                echo "put \"$f\" \"$d/$(basename "$f")\""
+              fi
+            done < /tmp/upload.list
+          } > /tmp/sftp-batch.txt
+          echo "--- batch ---"; head -n 30 /tmp/sftp-batch.txt
+
+      - name: Upload via SFTP
+        if: ${{ vars.USE_KEY_AUTH != 'true' }}
+        env:
+          HOST: ${{ secrets.FTP_HOST }}
+          PORT: ${{ secrets.FTP_PORT }}
+          USER: ${{ secrets.FTP_USERNAME }}
+          PASS: ${{ secrets.FTP_PASSWORD }}
+          ROOT: ${{ secrets.FTP_ROOT }}
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq sshpass >/dev/null
+          mkdir -p ~/.ssh
+          ssh-keyscan -p "${PORT:-22}" -H "$HOST" >> ~/.ssh/known_hosts 2>/dev/null
+          # заходим в docroot и выполняем batch-скрипт
+          {
+            echo "cd \"$ROOT\""
+            cat /tmp/sftp-batch.txt
+          } > /tmp/sftp-full.txt
+          set +e
+          # ВАЖНО: sshpass + sftp надёжнее работает в режиме команд из stdin,
+          # чем с флагом -b (batch). Порт передаём через sshpass -P.
+          output=$( { cat /tmp/sftp-full.txt; } | sshpass -P "${PORT:-22}" -p "$PASS" sftp \
+            -oPreferredAuthentications=password,keyboard-interactive \
+            -oPubkeyAuthentication=no \
+            -oNumberOfPasswordPrompts=1 \
+            "$USER@$HOST" 2>&1 )
+          rc=$?
+          set -e
+          echo "$output"
+          # «mkdir ... failure» на уже существующих папках — не ошибка
+          real_errors=$(echo "$output" \
+            | grep -vE '^sftp> |^mkdir .* failure|^Warning: Permanently added' \
+            | grep -iE 'error|permission denied|denied|not found|no such|bad packet|auth|connection (closed|refused|reset)|timed out|host key' || true)
+          if [ -n "$real_errors" ]; then
+            echo "::error::Загрузка завершилась с ошибками:"
+            echo "$real_errors"
+            exit 1
+          fi
+          if [ $rc -ne 0 ]; then
+            echo "::error::sftp завершился с кодом $rc — загрузка не подтверждена"
+            exit 1
+          fi
+          echo "✅ Загрузка завершена"
+
+      # =====================================================================
+      # Проверка результата (оба варианта): домен должен отвечать 200.
+      # SITE_URL задаётся в Settings → Secrets and variables → Actions →
+      # Variables (например https://example.ru). Без него шаг пропускается.
+      # =====================================================================
+      - name: Verify deployment
+        run: |
+          URL="${{ vars.SITE_URL }}"
+          if [ -z "$URL" ]; then
+            echo "::notice::SITE_URL не задан — пропускаем проверку"
+            exit 0
+          fi
+          sleep 5
+          code=$(curl -sL -o /dev/null -w '%{http_code}' "$URL" || echo "000")
+          echo "HTTP status: $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::Сайт вернул $code. Проверьте DNS, FTP_ROOT и права файлов."
+            exit 1
+          fi
+          echo "✅ Сайт отвечает 200"
