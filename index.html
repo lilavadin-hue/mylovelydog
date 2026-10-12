@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Домашняя передержка собак мелких пород до 10 кг в Санкт-Петербурге (Юнтолово). Одна собака за раз, прогулки, фотоотчёт ежедневно, фотосессия в подарок.">
+  <title>Домашняя передержка собак мелких пород — Юнтолово, Санкт-Петербург</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#hero" class="logo" aria-label="Домашняя передержка — на главную">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.5 9.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm15 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4ZM8 6.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-3.2 5.1c1.3 1.6 2.7 3.4 2.7 5.4 0 2.2-1.8 3.5-4 3.5-1.2 0-2.5-.5-3.5-.5s-2.3.5-3.5.5c-2.2 0-4-1.3-4-3.5 0-2 1.4-3.8 2.7-5.4C8.6 10.2 9.5 9 12 9s3.4 1.2 4.8 2.6Z"/></svg>
+      <span>Домашняя передержка</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a href="#services" class="nav__link">Услуги</a></li>
+        <li><a href="#prices" class="nav__link">Цены</a></li>
+        <li><a href="#gallery" class="nav__link">Галерея</a></li>
+        <li><a href="#reviews" class="nav__link">Отзывы</a></li>
+        <li><a href="#faq" class="nav__link">FAQ</a></li>
+        <li><a href="#contacts" class="nav__link">Контакты</a></li>
+      </ul>
+      <a href="#booking" class="btn btn--primary nav__cta">Забронировать</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content fade-in">
+        <h1 class="hero__title">Домашняя передержка для собак мелких пород <span class="accent">(до&nbsp;10&nbsp;кг)</span></h1>
+        <p class="hero__usp">Ваша собака будет <strong>единственным питомцем</strong> в квартире. Приезжайте заранее и посмотрите, где она будет жить. Опыт передержки более 5 лет. Рядом парк, собачья площадка и ветклиника. Только малыши до 10 кг, сроком до 7 дней. Ежедневный фотоотчёт и полное внимание только вашему питомцу. Бонус — профессиональная фотосессия на прогулке.</p>
+
+        <ul class="hero__features" role="list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span>Опыт более 5&nbsp;лет</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c-4 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2-6-6-10Z"/><path d="M9 21h6"/></svg>
+            <span>Парк и собачья площадка рядом</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10Z"/><path d="M12 8v5M9.5 10.5h5"/></svg>
+            <span>Ветклиника в шаговой доступности</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1-2h6l1 2"/></svg>
+            <span>Фотоотчёт ежедневно</span>
+          </li>
+        </ul>
+
+        <div class="hero__actions">
+          <a href="#booking" class="btn btn--primary">Забронировать</a>
+          <a href="#prices" class="btn btn--outline">Узнать цены</a>
+        </div>
+      </div>
+
+      <div class="hero__media fade-in">
+        <div class="hero__photo-wrap">
+          <img src="https://picsum.photos/seed/small-dog-hero/600/600" alt="Маленькая собака домашней передержки отдыхает на мягком лежаке" loading="lazy" width="600" height="600">
+        </div>
+        <span class="hero__badge hero__badge--1" aria-hidden="true">Только одна собака за раз</span>
+        <span class="hero__badge hero__badge--2" aria-hidden="true">До 10 кг</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ПРЕИМУЩЕСТВА / УСЛУГИ ============ -->
+  <section class="section advantages" id="services">
+    <div class="container">
+      <h2 class="section__title fade-in">Почему нам доверяют малышей</h2>
+      <div class="advantages__grid">
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Опыт более 5 лет</h3>
+          <p>Десятки собак мелких пород: чихуахуа, шпицы, йорки, той-терьеры.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+          <h3>Всегда только одна собака</h3>
+          <p>Никаких других животных. Всё внимание — только вашему питомцу.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg></div>
+          <h3>Приезжайте и убедитесь сами</h3>
+          <p>Покажем квартиру до заселения — вы увидите, где будет жить собака.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4c-3 3-5 5.5-5 8.5A5.5 5.5 0 0 0 18 15c0-3-2-5.5-5-11Z"/><path d="M4 20l5-3"/></svg></div>
+          <h3>Парк и площадка рядом</h3>
+          <p>Бег без поводка на огороженной собачьей площадке в парке.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="3"/><path d="M12 10v6M9 13h6"/></svg></div>
+          <h3>Ветклиника рядом</h3>
+          <p>В шаговой доступности — не придётся ехать через весь город.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm10 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM7 12a2 2 0 1 1 0-4M17 12a2 2 0 1 1 0-4"/><path d="M12 21c-3.5 0-6-2.5-6-5 0-3 2.5-5 6-5s6 2 6 5c0 2.5-2.5 5-6 5Z"/></svg></div>
+          <h3>Только мелкие породы</h3>
+          <p>Принимаем собак до 10 кг — комфортный формат для малыша.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg></div>
+          <h3>Срок до 7 дней</h3>
+          <p>Короткие поездки, командировки и отпуск — решим за неделю.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Без вольеров и клеток</h3>
+          <p>Собака живёт как дома: свободное пространство, лежанка, диван.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2l1.5 4H12L6 2Zm12 0l-1.5 4H12l6-4Z"/><path d="M4 10h16v5a8 8 0 0 1-16 0v-5Z"/></svg></div>
+          <h3>Формат «Всё своё»</h3>
+          <p>Корм, лежак и игрушки — знакомые вещи, меньше стресса.</p>
+        </article>
+        <article class="card fade-in">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l4 4v14H3V3h4Zm0 0v4H3"/><path d="M7 12h10M7 16h7"/></svg></div>
+          <h3>Договор и чек</h3>
+          <p>Прозрачные условия: официальный договор и чек при оплате.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ О НАС ============ -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__media fade-in">
+        <img src="https://picsum.photos/seed/dog-home-care/720/540" alt="Хозяйка гуляет с маленькой собакой в уютной домашней обстановке" loading="lazy" width="720" height="540">
+      </div>
+      <div class="about__content fade-in">
+        <h2 class="section__title section__title--left">Более 5 лет заботимся о собаках мелких пород</h2>
+        <p>За это время мы поняли главное: маленькой собаке нужен не вольер, а спокойный дом и человек рядом. Мы не берём много животных одновременно — только одну собаку за раз, чтобы внимание досталось именно вашему питомцу.</p>
+        <p>Умеем находить подход к разным характерам: стеснительным даём время освоиться, активным — выплёскиваем энергию на площадке, возрастным — обеспечиваем мягкий режим и покой.</p>
+        <a href="#booking" class="btn btn--primary">Забронировать дату</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ЧТО МЫ ДЕЛАЕМ ============ -->
+  <section class="section routine" id="routine">
+    <div class="container">
+      <h2 class="section__title fade-in">Что мы делаем</h2>
+      <ul class="routine__list">
+        <li class="fade-in">
+          <span class="routine__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10Z"/></svg></span>
+          <div><h3>Полное внимание</h3><p>Ваша собака — единственная за передержку. Никаких конкурентов за ласку.</p></div>
+        </li>
+        <li class="fade-in">
+          <span class="routine__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 4c-3 3-5 5.5-5 8.5A5.5 5.5 0 0 0 18 15c0-3-2-5.5-5-11Z"/><path d="M4 20l5-3"/></svg></span>
+          <div><h3>Прогулки 2–3 раза в день по 30 минут</h3><p>Стабильный режим, свежий воздух и движение каждый день.</p></div>
+        </li>
+        <li class="fade-in">
+          <span class="routine__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="6" r="2"/><path d="M4 20v-5l2-3 3-1 2 3 4 1"/><circle cx="17" cy="9" r="2"/><path d="M14 20l1-4"/></svg></span>
+          <div><h3>Бег без поводка</h3><p>На огороженной собачьей площадке — свобода и радость движения.</p></div>
+        </li>
+        <li class="fade-in">
+          <span class="routine__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1-2h6l1 2"/></svg></span>
+          <div><h3>Ежедневный фотоотчёт</h3><p>Фото и видео каждый день в WhatsApp или Telegram — вы всегда спокойны.</p></div>
+        </li>
+        <li class="fade-in">
+          <span class="routine__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+          <div><h3>Адаптация под характер</h3><p>Стеснительным — время, активным — площадку, возрастным — щадящий режим.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ЦЕНЫ ============ -->
+  <section class="section prices" id="prices">
+    <div class="container">
+      <h2 class="section__title fade-in">Цены</h2>
+      <div class="prices__grid">
+        <article class="price-card fade-in">
+          <h3>Посуточно</h3>
+          <p class="price-card__value">790&nbsp;₽<span class="price-card__per">/ сутки</span></p>
+          <ul class="price-card__list">
+            <li>Прогулки 2–3 раза в день</li>
+            <li>Ежедневный фотоотчёт</li>
+            <li>Договор и чек</li>
+          </ul>
+          <a href="#booking" class="btn btn--outline price-card__btn">Выбрать даты</a>
+        </article>
+        <article class="price-card price-card--featured fade-in">
+          <span class="price-card__badge">Выгодно</span>
+          <h3>Пакет «Неделя»</h3>
+          <p class="price-card__value">5&nbsp;000&nbsp;₽<span class="price-card__per">/ 7 суток</span></p>
+          <p class="price-card__save">Экономия 530&nbsp;₽</p>
+          <ul class="price-card__list">
+            <li>Всё из посуточного тарифа</li>
+            <li>Фиксированная цена на неделю</li>
+            <li>Приоритет при бронировании</li>
+          </ul>
+          <a href="#booking" class="btn btn--primary price-card__btn">Забронировать неделю</a>
+        </article>
+      </div>
+      <p class="prices__note fade-in">Оплата при заселении. Договор и чек. Для собак со специальным уходом — индивидуальные условия.</p>
+    </div>
+  </section>
+
+  <!-- ============ БОНУС ============ -->
+  <section class="section bonus-section" id="bonus">
+    <div class="container">
+      <div class="bonus fade-in">
+        <div class="bonus__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1-2h6l1 2"/><path d="M17 9.5h.01"/></svg>
+        </div>
+        <div class="bonus__content">
+          <h2>Бонус: фотосессия на прогулке 📸</h2>
+          <p>5–10 профессиональных портретных и прогулочных кадров вашего малыша, обработка и отправка в мессенджер. Память на годы — и красивые фото для соцсетей.</p>
+          <p class="bonus__price">Стоимость: <strong>+1000&nbsp;₽</strong></p>
+          <a href="#booking" class="btn btn--tg" id="bonusBtn">Добавить к брони</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ГАЛЕРЕЯ ============ -->
+  <section class="section gallery" id="gallery">
+    <div class="container">
+      <h2 class="section__title fade-in">Как это выглядит</h2>
+      <p class="section__subtitle fade-in">Прогулки в парке, игры на площадке и спокойные вечера дома</p>
+      <div class="gallery__grid" id="galleryGrid">
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-park-walk/600/600" alt="Маленькая собака гуляет в парке" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-playground/600/600" alt="Собака играет на собачьей площадке" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-off-leash/600/600" alt="Собака бежит без поводка на огороженной площадке" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-home-cozy/600/600" alt="Уютная домашняя обстановка передержки" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-portrait-1/600/600" alt="Портрет собаки мелких пород" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-portrait-2/600/600" alt="Прогулочный портрет собаки во время фотосессии" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-photoshoot/600/600" alt="Пример фотосессии собаки на прогулке" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-resting-bed/600/600" alt="Собака отдыхает на своём лежаке дома" loading="lazy" width="600" height="600">
+        </figure>
+        <figure class="gallery__item fade-in">
+          <img src="https://picsum.photos/seed/dog-autumn-park/600/600" alt="Собака гуляет по осеннему парку Юнтолово" loading="lazy" width="600" height="600">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Лайтбокс -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+    <button class="lightbox__close" id="lbClose" aria-label="Закрыть просмотр (Esc)">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button class="lightbox__prev" id="lbPrev" aria-label="Предыдущее фото">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <img class="lightbox__img" id="lbImg" src="" alt="">
+    <button class="lightbox__next" id="lbNext" aria-label="Следующее фото">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <div class="lightbox__counter" id="lbCounter" aria-live="polite"></div>
+  </div>
+
+  <!-- ============ ОТЗЫВЫ ============ -->
+  <section class="section reviews" id="reviews">
+    <div class="container">
+      <h2 class="section__title fade-in">Что говорят хозяева</h2>
+      <p class="section__subtitle fade-in">Более 5 лет — десятки довольных собак и их людей</p>
+      <div class="reviews__grid">
+        <article class="review fade-in">
+          <div class="review__head">
+            <img class="review__avatar" src="https://picsum.photos/seed/avatar-anna/96/96" alt="Фото Анны, хозяйки чихуахуа Тоси" loading="lazy" width="96" height="96">
+            <div>
+              <p class="review__name">Анна и чихуахуа Тося</p>
+              <div class="review__stars" role="img" aria-label="Оценка: 5 из 5">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote>«Оставляла Тосю на 5 дней. Каждый день получала фото и видео — сердце было спокойно. Тося гуляла в парке, спала на своём лежаке. Забрала довольную и ухоженную. Теперь только сюда.»</blockquote>
+          <time class="review__date" datetime="2025-03">Март 2025</time>
+        </article>
+
+        <article class="review fade-in">
+          <div class="review__head">
+            <img class="review__avatar" src="https://picsum.photos/seed/avatar-dmitry/96/96" alt="Фото Дмитрия, хозяина шпица Бублика" loading="lazy" width="96" height="96">
+            <div>
+              <p class="review__name">Дмитрий и шпиц Бублик</p>
+              <div class="review__stars" role="img" aria-label="Оценка: 5 из 5">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote>«Бублик у меня трусишка, боялся оставлять. Но здесь он быстро освоился — прислали фото уже в первый вечер. Отдельное спасибо за площадку: набегался так, что спал два дня. Рекомендую.»</blockquote>
+          <time class="review__date" datetime="2025-02">Февраль 2025</time>
+        </article>
+
+        <article class="review fade-in">
+          <div class="review__head">
+            <img class="review__avatar" src="https://picsum.photos/seed/avatar-marina/96/96" alt="Фото Марины, хозяйки йорка Мии" loading="lazy" width="96" height="96">
+            <div>
+              <p class="review__name">Марина и йорк Мия</p>
+              <div class="review__stars" role="img" aria-label="Оценка: 5 из 5">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote>«Мия пожилая, нужен особый режим. Обсудили всё заранее, приняли нас на отдельных условиях. Гуляли по 30 минут, кормили по схеме, давали лекарства. Очень бережный подход.»</blockquote>
+          <time class="review__date" datetime="2025-01">Январь 2025</time>
+        </article>
+
+        <article class="review fade-in">
+          <div class="review__head">
+            <img class="review__avatar" src="https://picsum.photos/seed/avatar-olga/96/96" alt="Фото Ольги, хозяйки той-терьера Чарли" loading="lazy" width="96" height="96">
+            <div>
+              <p class="review__name">Ольга и той-терьер Чарли</p>
+              <div class="review__stars" role="img" aria-label="Оценка: 5 из 5">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2z"/></svg>
+              </div>
+            </div>
+          </div>
+          <blockquote>«Взяла бонус — фотосессию. Получила 8 шикарных кадров с прогулки! Чарли как модель. И главное — за неделю ни разу не переживала: фотоотчёт каждый день, договор, чек. Всё прозрачно.»</blockquote>
+          <time class="review__date" datetime="2024-12">Декабрь 2024</time>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ УСЛОВИЯ ============ -->
+  <section class="section conditions" id="conditions">
+    <div class="container">
+      <h2 class="section__title fade-in">Условия</h2>
+      <div class="conditions__grid">
+        <div class="condition-card fade-in">
+          <h3>Подготовьте заранее</h3>
+          <p>Корм (с запасом), миска, лежак, любимые игрушки. Лекарства — с запасом и схемой приёма.</p>
+        </div>
+        <div class="condition-card condition-card--warn fade-in">
+          <h3>Важно</h3>
+          <p>Собаки, требующие специального ухода и режима (пожилые, больные, после операций, на препаратах), принимаются по согласованию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section faq" id="faq">
+    <div class="container container--narrow">
+      <h2 class="section__title fade-in">Частые вопросы</h2>
+      <div class="faq__list" id="faqList">
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+            <span>Что если собака заболеет?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a1" role="region" aria-labelledby="faq-q1">
+            <p>Рядом ветклиника. При малейшем подозрении сразу связываемся с вами, описываем симптомы, по согласованию ведём к ветеринару. Без вашего ведома — никаких действий, кроме экстренных случаев.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+            <span>Принимаете пожилых или больных собак?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a2" role="region" aria-labelledby="faq-q2">
+            <p>Да, но на отдельных условиях. Напишите заранее о диагнозе, препаратах и особенностях ухода — обсудим.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+            <span>Какой у вас опыт?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a3" role="region" aria-labelledby="faq-q3">
+            <p>Более 5 лет, только мелкие породы до 10 кг, всегда одна собака за раз.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+            <span>Какие документы нужны?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a4" role="region" aria-labelledby="faq-q4">
+            <p>Ветпаспорт с вакцинациями. Перед заселением — договор и чек.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+            <span>Можно с течкой?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a5" role="region" aria-labelledby="faq-q5">
+            <p>Да, предупредите заранее.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a6" id="faq-q6">
+            <span>Что взять с собой?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a6" role="region" aria-labelledby="faq-q6">
+            <p>Корм, миску, лежак, игрушки. Лекарства — с запасом и схемой приёма.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a7" id="faq-q7">
+            <span>Как часто фото?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a7" role="region" aria-labelledby="faq-q7">
+            <p>Ежедневно, в WhatsApp или Telegram.</p>
+          </div>
+        </div>
+        <div class="faq__item fade-in">
+          <button class="faq__question" aria-expanded="false" aria-controls="faq-a8" id="faq-q8">
+            <span>Что если вы не отвечаете?</span>
+            <svg class="faq__chevron" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__answer" id="faq-a8" role="region" aria-labelledby="faq-q8">
+            <p>Всегда на связи в мессенджере. Оставляем номер доверенного лица.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ КАК ЭТО РАБОТАЕТ ============ -->
+  <section class="section steps" id="steps">
+    <div class="container">
+      <h2 class="section__title fade-in">Как это работает</h2>
+      <ol class="steps__list">
+        <li class="step fade-in">
+          <span class="step__num" aria-hidden="true">1</span>
+          <h3>Знакомство и осмотр</h3>
+          <p>Приезжаете, смотрите квартиру, знакомитесь с нами и рассказываете о привычках собаки.</p>
+        </li>
+        <li class="step fade-in">
+          <span class="step__num" aria-hidden="true">2</span>
+          <h3>Заезд</h3>
+          <p>Привозите собаку, корм и вещи — подписываем договор, передаём контакты.</p>
+        </li>
+        <li class="step fade-in">
+          <span class="step__num" aria-hidden="true">3</span>
+          <h3>Проживание</h3>
+          <p>Собака живёт одна, гуляет, играет и получает ласку — вы видите фотоотчёт каждый день.</p>
+        </li>
+        <li class="step fade-in">
+          <span class="step__num" aria-hidden="true">4</span>
+          <h3>Возвращение</h3>
+          <p>Забираете счастливого, отдохнувшего питомца — и красивые фото в подарок.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ КАРТА ============ -->
+  <section class="section map" id="map-section">
+    <div class="container">
+      <h2 class="section__title fade-in">Мы находимся в Юнтолово</h2>
+      <p class="section__subtitle fade-in">Санкт-Петербург, Приморский район. Рядом Юнтоловский заказник и парк с собачьей площадкой</p>
+      <div class="map__frame fade-in">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=30.225%2C60.005&z=12&pt=30.225,60.005,pm2rdm"
+          title="Карта: Юнтолово, Приморский район, Санкт-Петербург"
+          width="100%" height="400"
+          loading="lazy"
+          allowfullscreen></iframe>
+      </div>
+      <p class="map__note fade-in">Точный адрес сообщим при бронировании. Рядом: парк, собачья площадка, ветклиника.</p>
+    </div>
+  </section>
+
+  <!-- ============ БРОНИРОВАНИЕ ============ -->
+  <section class="section booking" id="booking">
+    <div class="container container--narrow">
+      <div class="booking__card fade-in">
+        <h2 class="booking__title">Свободные даты на этой неделе ограничены!</h2>
+        <p class="booking__subtitle">Оставьте заявку — свяжемся в течение часа и подберём дату.</p>
+
+        <form class="booking__form" id="bookingForm" novalidate>
+          <div class="form-group">
+            <label for="fName">Имя <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="fName" name="name" autocomplete="name" placeholder="Как к вам обращаться" required aria-required="true">
+            <p class="field-error" id="errName" role="alert"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="fPhone">Телефон или мессенджер <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="fPhone" name="contact" autocomplete="tel" placeholder="+7 921 897-62-08 или @telegram" required aria-required="true">
+            <p class="field-error" id="errPhone" role="alert"></p>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fDates">Даты передержки <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="fDates" name="dates" placeholder="Например: 15–20 октября" required aria-required="true">
+              <p class="field-error" id="errDates" role="alert"></p>
+            </div>
+            <div class="form-group">
+              <label for="fBreed">Порода и вес собаки</label>
+              <input type="text" id="fBreed" name="breed" placeholder="Чихуахуа, 4 кг">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fComment">Комментарий (необязательно)</label>
+            <textarea id="fComment" name="comment" rows="3" placeholder="Особенности питания, режим, лекарства…"></textarea>
+          </div>
+
+          <div class="form-group form-group--checkbox">
+            <label class="checkbox">
+              <input type="checkbox" id="fPhoto" name="photoshoot">
+              <span class="checkbox__box" aria-hidden="true"></span>
+              <span>Хочу фотосессию (+1000&nbsp;₽)</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block">Забронировать</button>
+          <p class="form-success" id="formSuccess" role="status" hidden>Спасибо! Мы свяжемся с вами в течение часа</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contacts">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <p class="footer__logo">Домашняя передержка</p>
+      <p class="footer__tagline">Забота о собаках мелких пород до 10 кг · Санкт-Петербург, Юнтолово</p>
+    </div>
+    <ul class="footer__contacts" role="list">
+      <li>
+        <a href="tel:+79218976208" aria-label="Позвонить">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .3 2 .6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>
+          +7&nbsp;921&nbsp;897-62-08
+        </a>
+      </li>
+      <li>
+        <a href="https://t.me/+79218976208" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.3-5.1L18 6.4c.4-.4-.1-.6-.6-.2L7.3 13.1l-5-1.6c-1-.3-1.1-1 .2-1.6l17.7-6.8c.9-.3 1.6.3 1.7 1.2Z"/></svg>
+          Telegram
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="container footer__bottom">
+    <p>© 2026 Домашняя передержка. Все права защищены.</p>
+    <p class="footer__legal">ИП / самозанятый. Договор и чек.</p>
+  </div>
+</footer>
+
+<!-- Плавающая кнопка Telegram -->
+<a href="https://t.me/+79218976208" class="tg-fab" id="tgFab" target="_blank" rel="noopener noreferrer" aria-label="Написать в Telegram">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-5-3.7-2.4 2.3c-.3.3-.5.5-1 .5l.3-5.1L18 6.4c.4-.4-.1-.6-.6-.2L7.3 13.1l-5-1.6c-1-.3-1.1-1 .2-1.6l17.7-6.8c.9-.3 1.6.3 1.7 1.2Z"/></svg>
+  <span class="tg-fab__tooltip" role="tooltip">Написать в Telegram</span>
+</a>
+
+<!-- Кнопка «Наверх» -->
+<button class="to-top" id="toTop" aria-label="Наверх">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
